@@ -5,19 +5,17 @@ public class QuizDemo {
     //return the school name which has got the highest score in quiz
     //Handle the NumberFormatException
     public String highestScore(String[] nameOfSchool, String[] scores) {
-        int[] newScores = new int[scores.length];
+        int[] ScoresNew = new int[scores.length];
         String value = "";
         try {
-
-
             for (int i = 0; i < scores.length; i++) {
-                newScores[i] = Integer.parseInt(scores[i]);
+                ScoresNew[i] = Integer.parseInt(scores[i]);
             }
             int maxScore = 0;
 
             for (int i = 0; i < nameOfSchool.length; i++) {
-                if (newScores[i] > maxScore) {
-                    maxScore = newScores[i];
+                if (ScoresNew[i] > maxScore) {
+                    maxScore = ScoresNew[i];
                     value = nameOfSchool[i];
                 }
 
